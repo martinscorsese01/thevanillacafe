@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+    --font-script: 'Brush Script MT', 'Lucida Handwriting', cursive;
+    --font-sans: system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-charcoal;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+
+  /* Focus styles for accessibility */
+  a:focus-visible,
+  button:focus-visible {
+    @apply outline-2 outline-offset-2 outline-gold;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .gradient-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(106, 24, 39, 0.4) 0%,
+      rgba(106, 24, 39, 0.6) 100%
+    );
+  }
+}
+
